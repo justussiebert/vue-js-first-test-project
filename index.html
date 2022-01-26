@@ -38,6 +38,19 @@
             >Link, Verlinkung verhindert per Vue JS</a
           >
         </p>
+        <p v-text="'v-Text aus dem space'">Normaler dom-Text</p>
+        <p v-text="nutzerName"></p>
+        <p v-text="teamA[1].nameOfTeamMember"></p>
+        <p>
+          Anzahl Team-Mitglieder Team A: <span v-text="teamA.length"></span>
+        </p>
+        <div v-html="someHtmlStuff"></div>
+        <p v-once>{{ nutzerName }}</p>
+        <div v-pre>
+          {{
+          <h3>hfhfhff</h3>
+          }}
+        </div>
       </section>
     </main>
     <script src="https://unpkg.com/vue@next"></script>

@@ -29,6 +29,21 @@ Vue.createApp({
       dateBorn: 500,
       //lastLogin: dateFormatted,
       lastLogin: new Date().toLocaleString("de-DE"),
+      teamA: [
+        {
+          nameOfTeamMember: "Tarzan",
+          ageOfTeamMember: 25,
+        },
+        {
+          nameOfTeamMember: "Jane",
+          ageOfTeamMember: 29,
+        },
+        {
+          nameOfTeamMember: "Cheetah",
+          ageOfTeamMember: 12,
+        },
+      ],
+      someHtmlStuff: '<h2 class="someClass">Some Text for headline</h2>',
     };
   },
 
