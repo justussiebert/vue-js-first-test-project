@@ -9,15 +9,35 @@
   <body>
     <main>
       <section id="sect1">
-        <h1>Es geht um : {{nutzerName}}</h1>
+        <h1>Es geht um: {{nutzerName}}</h1>
         <p>
           {{ `${nutzerName} besteht aus ${nutzerName.length} Buchstaben.` }}
         </p>
         <p>
-          Gelebt hat {{nutzerName}} um {{dateBorn}}, in die Höhle des Drachen
-          eingelocht hat er sich zuletzt am {{ lastLogin }} Uhr.
+          Gelebt hat <span v-meinglanzlicht>{{nutzerName}}</span> um
+          {{dateBorn}}, in die Höhle des Drachen eingelocht hat er sich zuletzt
+          am {{ lastLogin }} Uhr.
         </p>
         <p>Datum jetzt: {{ new Date().toLocaleString("de-DE") }}</p>
+        <p>
+          <a
+            id="linkNormalJs"
+            class="testcss"
+            href="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
+            target="_blank"
+            >Link, Verlinkung verhindert per Vanilla JS</a
+          >
+        </p>
+        <p>
+          <a
+            id="linkVueJs"
+            class="testcss"
+            v-on:click.prevent
+            href="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
+            target="_blank"
+            >Link, Verlinkung verhindert per Vue JS</a
+          >
+        </p>
       </section>
     </main>
     <script src="https://unpkg.com/vue@next"></script>
